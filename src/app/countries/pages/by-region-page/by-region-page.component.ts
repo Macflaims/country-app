@@ -8,11 +8,16 @@ import { Country } from '../../interfaces/country';
   styles: ``
 })
 export class ByRegionPageComponent {
+  public isLoading: boolean = false
   public countries: Country[] = []
 
   constructor(private countriesService: CountriesService) { }
 
   searchByRegion(term: string): void {
-    this.countriesService.searchRegion(term).subscribe(countries => this.countries = countries)
+    this.isLoading = true;
+    this.countriesService.searchRegion(term).subscribe(countries => {
+      this.countries = countries;
+      this.isLoading = false;
+    })
   }
 }
