@@ -1,2 +1,2 @@
-<input [placeholder]="" (keyup.enter)="emitValue(txtInput.value)" (keyup)="onKeyPress(txtInput.value)" type="text"
-  class="form-control" #txtInput>
+<input [placeholder]="placeholder" [value]="initialValue" (keyup.enter)="emitValue(txtInput.value)"
+  (keyup)="onKeyPress(txtInput.value)" type="text" class="form-control" #txtInput>
