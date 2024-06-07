@@ -1,8 +1,5 @@
 
-import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { CommonModule } from '@angular/common';
-import { ContactPageComponent } from './pages/contact-page/contact-page.component';
-import { HomePageComponent } from './pages/home-page/homePage.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SearchBoxComponent } from './components/searchBox/searchBox.component';
@@ -12,8 +9,8 @@ import { LoadingSpinnerComponent } from './components/loadingSpinner/loadingSpin
 
 @NgModule({
   imports: [CommonModule, RouterModule],
-  exports: [HomePageComponent, AboutPageComponent, SidebarComponent, ContactPageComponent, SearchBoxComponent, LoadingSpinnerComponent],
-  declarations: [HomePageComponent, AboutPageComponent, SidebarComponent, ContactPageComponent, SearchBoxComponent, LoadingSpinnerComponent],
+  exports: [SidebarComponent, SearchBoxComponent, LoadingSpinnerComponent],
+  declarations: [SidebarComponent, SearchBoxComponent, LoadingSpinnerComponent],
   providers: [],
 })
 export class SharedModule { }
